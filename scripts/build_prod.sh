@@ -1,1 +1,1 @@
-ng build --output-path docs --configuration=production --base-href /problems-site/
+ng build --output-path docs --configuration=production --base-href https://github.com/francisco-rma/problems-site/
