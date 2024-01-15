@@ -1,37 +1,33 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './shared/shared.module';
-import { WelcomeModule } from './welcome/welcome.module';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    MenuComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    CommonModule,
     RouterModule,
-    SharedModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatIconModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    WelcomeModule
+    MatSelectModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+    MenuComponent,
+  ]
 })
-export class AppModule { }
+export class SharedModule { }
